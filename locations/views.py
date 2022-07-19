@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Location
 from .forms import CommentForm
 
@@ -62,3 +63,15 @@ class LocationSingle(View):
                 "comment_form": CommentForm()
             }
         )
+
+class LocationLike(View):
+
+    def post(self, request, slug):
+        location = get_object_or_404(Location, slug=slug)
+
+        if location.likes.filter(id=request.user.id).exists():
+            location.likes.remove(request.user)
+        else:
+            location.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('location_single', args=[slug]))
