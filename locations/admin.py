@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import Location
+from django_summernote.admin import SummernoteModelAdmin
 
-# Register your models here.
+
+@admin.register(Location)
+class LocationAdmin(SummernoteModelAdmin):
+
+    summernote_fields = ('body')
