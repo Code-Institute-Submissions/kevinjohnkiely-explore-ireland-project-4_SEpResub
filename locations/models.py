@@ -10,6 +10,7 @@ class Location(models.Model):
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name="location_posts")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    county = models.CharField(max_length=20, blank=True)
     body = models.TextField()
     location_image = CloudinaryField('image', default='placeholder_image')
     excerpt = models.TextField(blank=True)

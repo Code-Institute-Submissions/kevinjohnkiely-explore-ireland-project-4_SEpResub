@@ -1,8 +1,9 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.utils.text import slugify
 from .models import Location
-from .forms import CommentForm
+from .forms import CommentForm, LocationForm
 
 
 class LocationList(generic.ListView):
@@ -75,3 +76,20 @@ class LocationLike(View):
             location.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('location_single', args=[slug]))
+
+
+class AddLocation(View):
+
+    def get(self, request):
+        return render(
+            request, "add_location.html", {"location_form": LocationForm()})
+
+    def post(self, request):
+        location_form = LocationForm(request.POST, request.FILES)
+
+        if location_form.is_valid():
+            location = location_form.save(commit=False)
+            location.creator = request.user
+            location.slug = slugify(location.title)
+            location.save()
+            return redirect('home')

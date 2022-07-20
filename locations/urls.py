@@ -6,4 +6,5 @@ urlpatterns = [
     path('', views.LocationList.as_view(), name='home'),
     path('<slug:location_slug>/', views.LocationSingle.as_view(), name='location_single'),
     path('like/<slug:slug>', views.LocationLike.as_view(), name='location_like'),
+    path('add_location', views.AddLocation.as_view(), name='add_location'),
 ]
