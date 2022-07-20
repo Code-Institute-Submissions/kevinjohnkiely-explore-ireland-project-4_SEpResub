@@ -1,12 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
 class Location(models.Model):
-    title = models.CharField(max_length=150, unique=True)
-    slug = models.SlugField(max_length=150, unique=True)
+    title = models.CharField(max_length=150)
+    slug = models.SlugField(max_length=150)
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name="location_posts")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -25,6 +26,9 @@ class Location(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
+
+    def get_absolute_url(self):
+        return reverse('my_locations')
 
 
 class Comment(models.Model):

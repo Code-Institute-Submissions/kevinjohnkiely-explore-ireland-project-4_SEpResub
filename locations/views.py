@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
+from django.views.generic import UpdateView
 from django.http import HttpResponseRedirect
 from django.utils.text import slugify
+from datetime import datetime
 from .models import Location
 from .forms import CommentForm, LocationForm
 
@@ -78,6 +80,17 @@ class LocationLike(View):
         return HttpResponseRedirect(reverse('location_single', args=[slug]))
 
 
+class MyLocations(View):
+    def get(self, request):
+        if request.user.is_authenticated:
+            the_locations = Location.objects.filter(creator=request.user).order_by('-created_at')
+            
+            return render(
+                request, 'my_locations.html', {"the_locations": the_locations, })
+        else:
+            return render(request, 'my_locations.html')
+
+
 class AddLocation(View):
 
     def get(self, request):
@@ -90,6 +103,25 @@ class AddLocation(View):
         if location_form.is_valid():
             location = location_form.save(commit=False)
             location.creator = request.user
-            location.slug = slugify(location.title)
+            # Code to make slug unique using date time
+            curr_time = datetime.now()
+            date_time = curr_time.strftime("%m/%d/%Y%H:%M:%S")
+            location.slug = slugify('-'.join([location.title, date_time]))
             location.save()
             return redirect('home')
+        else:
+            location_form = LocationForm()
+
+        return render(
+            request,
+            "add_location.html",
+            {
+                "location_form": location_form
+            },
+        )
+
+class EditLocation(UpdateView):
+    
+    model = Location
+    template_name = 'edit_location.html'
+    form_class = LocationForm

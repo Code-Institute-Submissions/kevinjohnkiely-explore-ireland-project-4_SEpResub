@@ -14,8 +14,8 @@
         <div class="col-10 mt-3 offset-1 g-0">
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ location_form | crispy }}
-                <button class="btn btn-secondary right mb-2" type="submit" value="Save">Add New Location</button>
+                {{ form.as_p}}
+                <button class="btn btn-secondary right mb-2" type="submit" value="Save">Change Location</button>
             </form>
         </div>
     </div>

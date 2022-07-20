@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+{% for location in the_locations %}
+<div>{{ location.title }} | <a href="{% url 'edit_location' location.id %}">EDIT</a> | 
+    <a href="{% url 'delete_location' location.id %}">EDIT</a></div>
+{% endfor%}
+
+
+{% endblock content%}

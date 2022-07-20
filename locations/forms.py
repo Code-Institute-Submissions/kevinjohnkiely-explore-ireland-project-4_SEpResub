@@ -12,7 +12,7 @@ class CommentForm(forms.ModelForm):
 class LocationForm(forms.ModelForm):
     class Meta:
         model = Location
-        fields = ('title', 'county', 'body', 'location_image')
+        fields = ('title', 'county', 'body', 'location_image', 'status')
         widgets = {
             'body': SummernoteWidget()
         }
@@ -22,3 +22,4 @@ class LocationForm(forms.ModelForm):
         self.fields[
             'location_image'
             ].label = "Please upload a photo of location here!"
+        self.fields['status'].label = "Publish or Save Draft"
