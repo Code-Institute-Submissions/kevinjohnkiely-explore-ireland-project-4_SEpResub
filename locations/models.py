@@ -4,6 +4,12 @@ from django.urls import reverse
 from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
+REGION_OPTIONS = (
+    ('Connaught','Connaught'),
+    ('Leinster', 'Leinster'),
+    ('Munster','Munster'),
+    ('Ulster','Ulster'),
+)
 
 class Location(models.Model):
     title = models.CharField(max_length=150)
@@ -11,7 +17,7 @@ class Location(models.Model):
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name="location_posts")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    county = models.CharField(max_length=20, blank=True)
+    region = models.CharField(max_length=20, choices=REGION_OPTIONS, blank=True)
     body = models.TextField()
     location_image = CloudinaryField('image', default='placeholder_image')
     excerpt = models.TextField(blank=True)

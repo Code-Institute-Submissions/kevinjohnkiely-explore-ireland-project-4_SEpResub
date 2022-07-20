@@ -120,8 +120,16 @@ class AddLocation(View):
             },
         )
 
+
 class EditLocation(UpdateView):
     
     model = Location
     template_name = 'edit_location.html'
     form_class = LocationForm
+
+
+def delete_location(request, location_id):
+
+    location = get_object_or_404(Location, id=location_id)
+    location.delete()
+    return redirect(reverse('my_locations'))

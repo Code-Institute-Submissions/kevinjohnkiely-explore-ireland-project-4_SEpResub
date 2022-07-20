@@ -12,7 +12,7 @@ class CommentForm(forms.ModelForm):
 class LocationForm(forms.ModelForm):
     class Meta:
         model = Location
-        fields = ('title', 'county', 'body', 'location_image', 'status')
+        fields = ('title', 'region', 'body', 'location_image', 'status')
         widgets = {
             'body': SummernoteWidget()
         }
