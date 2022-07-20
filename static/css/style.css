@@ -1,5 +1,24 @@
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,300,700");
+
 body {
     background-color: #F9FAFC;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.main_dark_green {
+    background-color: rgb(1, 77, 1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-item {
+    border-bottom: 2px solid transparent;
+}
+
+.nav-item:hover {
+    border-bottom: 2px solid rgb(230, 98, 3);
 }
 
 .brand {
