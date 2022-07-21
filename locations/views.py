@@ -14,6 +14,7 @@ class LocationList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 6
 
+
 class LocationSingle(View):
 
     def get(self, request, location_slug, *args, **kwargs):
