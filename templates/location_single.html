@@ -5,6 +5,29 @@
 
 {% load crispy_forms_tags %}
 
+<!-- Section showing photo to left, comment form to right -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 card mb-4 mt-3">
+            <h1 class="location-title">{{ location.title }}</h1>
+            <div class="card-body">
+                <div class="image-container">
+                    {% if "placeholder_image" in location.location_image.url %}
+                    <img class="card-img-top" src="{% static 'images/cliffs.jpg' %}">
+                    {% else %}
+                    <img class="card-img-top" src=" {{ location.location_image.url }}">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 card mb-4 mt-3">
+            <div class="card-body">
+                contact from
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
@@ -42,16 +65,18 @@
                             <form class="d-inline" action="{% url 'location_like' location.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{location.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{location.slug}}" class="btn-like"><i
+                                        class="fas fa-heart"></i></button>
                                 {% else %}
-                                <button type="submit" name="blogpost_id" value="{{location.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{location.slug}}" class="btn-like"><i
+                                        class="far fa-heart"></i></button>
                                 {% endif %}
                             </form>
                             {% else %}
                             <span class="text-secondary"><i class="far fa-heart"></i></span>
                             {% endif %}
-                        <!-- The number of likes goes before the closing strong tag -->
-                        <span class="text-secondary">{{ location.number_of_likes }} </span>
+                            <!-- The number of likes goes before the closing strong tag -->
+                            <span class="text-secondary">{{ location.number_of_likes }} </span>
                         </strong>
                     </div>
                     <div class="col-1">

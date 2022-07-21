@@ -6,7 +6,16 @@ body {
 }
 
 .main_dark_green {
-    background-color: rgb(1, 77, 1);
+    background-image: linear-gradient(to right, rgb(10, 108, 1) , rgb(2, 219, 46));
+    border-bottom: 5px solid rgb(230, 98, 3);
+}
+
+hr.home_hr {
+    width: 20%;
+    margin: auto;
+    border-top: 5px solid rgb(230, 98, 3);
+    margin-bottom: 1rem;
+    opacity: 1;
 }
 
 .navbar-brand {
@@ -21,6 +30,23 @@ body {
     border-bottom: 2px solid rgb(230, 98, 3);
 }
 
+.jumbotron {
+    background: url("/static/images/cliffs_home.jpg") 50% 0 no-repeat fixed;
+    min-height: 20rem;
+    padding: 3rem;
+}
+
+.jumbotron h1 {
+    color: white;
+    font-size: 5rem;
+    text-shadow:1px 1px 10px rgb(0, 0, 0), 1px 1px 10px rgb(0, 0, 0);
+}
+
+.jumbotron h3 {
+    color: white;
+    font-size: 2.5rem;
+}
+
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
@@ -28,20 +54,12 @@ body {
     color: #4A4A4F;
 }
 
-.red-o {
-    color: #E84610;
-}
-
-.thin {
-    font-weight: 300;
-}
-
 .light-bg {
     background-color: #fff;
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: rgb(10, 108, 1)
 }
 
 .main-bg {
@@ -53,22 +71,31 @@ body {
     background-color: transparent;
 }
 
-.image-container {
-    position: relative;
+.card-title {
+    color: rgb(10, 108, 1);
 }
 
-.image-flash {
+.card-title:hover {
+    color: rgb(230, 98, 3);
+}
+
+.image-container {
+    position: relative;
+    margin-bottom: 0.8rem;
+}
+
+.location-homepage-info {
     position: absolute;
-    bottom: 5%;
+    top: 0;
     min-width: 30%;
-    left: -2px;
-    background-color: #23BBBB;
+    right: 0;
+    background-color: rgb(10, 108, 1);
 }
 
 .author {
     color: white;
-    margin: 4px;
-    text-transform: uppercase;
+    margin: 0.8rem;
+    /* text-transform: uppercase; */
 }
 
 .masthead {
@@ -115,35 +142,37 @@ body {
     color: #E84610;
 }
 
-.post-title {
-    margin-top: 20%;
+.location-title {
+    margin-top: 3rem;
     margin-left: 5%;
 }
 
-.post-subtitle {
+.location-subtitle {
     margin-left: 5%;
     color: lightgray;
 }
 
 .btn-signup {
-    background-color: #23BBBB;
+    background-color: rgb(10, 108, 1);
     color: #fff;
+    margin-bottom: 3rem;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
-    color: #23BBBB;
+    color: rgb(2, 219, 46);
+    border: 1px solid rgb(10, 108, 1);
 }
 
 .link {
-    color: #23BBBB;
+    color: rgb(10, 108, 1);
     text-decoration: none;
 }
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: rgb(230, 98, 3);
     text-decoration: underline;
 }
 

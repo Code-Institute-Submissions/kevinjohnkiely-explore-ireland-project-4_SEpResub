@@ -2,10 +2,16 @@
 {% block content %}
 {% load static %}
 
+{% if the_locations|length == 0 %}
+
+<h3 class="text-center p-4">You haven't added any locations yet! Please <a class="link" href="{% url 'add_location' %}">add one now.</a></h3>
+
+{% else %}
+
 {% for location in the_locations %}
 <div>{{ location.title }} | <a href="{% url 'edit_location' location.id %}">EDIT</a> | 
     <a href="{% url 'delete_location' location.id %}">DELETE</a></div>
 {% endfor%}
-
+{% endif %}
 
 {% endblock content%}

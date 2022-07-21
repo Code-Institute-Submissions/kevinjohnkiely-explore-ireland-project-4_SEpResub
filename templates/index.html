@@ -4,10 +4,20 @@
 {% block content %}
 
 <div class="container-fluid">
-    
+  <div class="jumbotron">
+    <h1 class="text-center">Explore Ireland!</h1>
+    <hr class="home_hr">
+    <h3 class="text-center">Find locations and share your own!</h3>
+  </div>
+    <div class="row">
+      <h3 class="text-center mt-5">What people are sharing...</h3>
+    </div>
     <div class="row">
         <div class="col-12 mt-3 left">
             <div class="row">
+                {% if location_list|length == 0 %}
+                <h3 class="text-center mb-5">No locations posted yet!</h3>
+                {% else %}
                 {% for location in location_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
@@ -18,15 +28,15 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ location.location_image.url }}">
                                 {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Creator: {{ location.creator }}</p>
+                                <div class="location-homepage-info">
+                                    <p class="author">Posted by: {{ location.creator }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'location_single' location.slug %}" class="post-link">
-                                <h2 class="card-title">{{ location.title }}</h2>
+                                <h2 class="card-title"><strong>{{ location.title }}</strong></h2>
                                 <p class="card-text">{{ location.excerpt }}</p>
                             </a>
-                            <hr />
+                            <hr class="home_hr">
                             <p class="card-text text-muted h6">{{ location.created_at}} <i class="far fa-heart"></i>
                                 {{ location.number_of_likes }}</p>
                         </div>
@@ -37,7 +47,7 @@
             <div class="row">
                 {% endif %}
                 {% endfor %}
-
+                {% endif %}
             </div>
         </div>
     </div>
