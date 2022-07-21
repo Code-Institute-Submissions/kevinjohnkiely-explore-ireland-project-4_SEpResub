@@ -6,7 +6,7 @@ body {
 }
 
 .main_dark_green {
-    background-image: linear-gradient(to right, rgb(10, 108, 1) , rgb(2, 219, 46));
+    background-image: linear-gradient(to right, rgb(2, 219, 46), rgb(10, 108, 1));
     border-bottom: 5px solid rgb(230, 98, 3);
 }
 
@@ -20,6 +20,10 @@ hr.home_hr {
 
 .navbar-brand {
     font-size: 1.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,1);
 }
 
 .nav-item {
@@ -153,4 +157,16 @@ hr.home_hr {
     color: #E84610;
     background: transparent;
     border: none;
+}
+
+.comment-body {
+    padding: 2rem;
+    padding-bottom: 1rem;
+    border: 1px solid rgb(10, 108, 1);
+    background-color: white;
+}
+
+.table-spacer {
+    border-bottom: 2px dotted rgb(2, 219, 46);
+    margin-bottom: 1rem;
 }

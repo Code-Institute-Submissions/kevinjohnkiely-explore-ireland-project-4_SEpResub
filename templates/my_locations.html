@@ -2,16 +2,44 @@
 {% block content %}
 {% load static %}
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-2">
+            <h1 class="text-center py-4">My Locations</h1>
+            <h3 class="text-center mb-4">Manage your location posts here</h3>
+        </div>
+    </div>
+</div>
+
 {% if the_locations|length == 0 %}
 
-<h3 class="text-center p-4">You haven't added any locations yet! Please <a class="link" href="{% url 'add_location' %}">add one now.</a></h3>
+<h3 class="text-center p-4">You haven't added any locations yet! Please <a class="link"
+        href="{% url 'add_location' %}">add one now.</a></h3>
 
 {% else %}
 
-{% for location in the_locations %}
-<div>{{ location.title }} | <a href="{% url 'edit_location' location.id %}">EDIT</a> | 
-    <a href="{% url 'delete_location' location.id %}">DELETE</a></div>
-{% endfor%}
+<div class="container">
+    {% for location in the_locations %}
+    <div class="row">
+        <div class="col-md-8 offset-2 sm-10">
+            <div class="row table-spacer">
+                <div class="col-sm-4"><h2>{{ location.title }}</h2></div>
+                
+                <div class="col-sm-8">
+                    <a class="btn btn-warning" href="{% url 'edit_location' location.id %}" role="button">EDIT</a>
+                    <a class="btn btn-danger" href="{% url 'delete_location' location.id %}" role="button">DELETE</a>
+                    {% if not location.status %}
+                    <a class="btn btn-success" href="{% url 'edit_location' location.id %}" role="button">PUBLISH</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {% endfor%}
+</div>
+
+
 {% endif %}
 
 {% endblock content%}
