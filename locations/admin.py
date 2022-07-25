@@ -15,11 +15,11 @@ class LocationAdmin(SummernoteModelAdmin):
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
 
-    list_display = ('name', 'body', 'location', 'created_at', 'comment_approved')
-    list_filter = ('comment_approved', 'created_at')
+    list_display = ('name', 'body', 'location', 'created_at')
+    list_filter = ('created_at',)
     search_fields = ('name', 'email', 'body')
-    actions = ['approve_location_comments']
+    # actions = ['approve_location_comments']
 
-    def approve_location_comments(self, request, queryset):
-        queryset.update(comment_approved=True)
+    # def approve_location_comments(self, request, queryset):
+    #     queryset.update(comment_approved=True)
 
