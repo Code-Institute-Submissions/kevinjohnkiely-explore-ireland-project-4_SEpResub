@@ -23,21 +23,46 @@
     <div class="row">
         <div class="col-md-8 offset-2 sm-10">
             <div class="row table-spacer">
-                <div class="col-sm-4"><h2>{{ location.title }}</h2></div>
-                
+                <div class="col-sm-4">
+                    <h2>{{ location.title }}</h2>
+                </div>
+
                 <div class="col-sm-8">
                     <a class="btn btn-warning" href="{% url 'edit_location' location.id %}" role="button">EDIT</a>
-                    <a class="btn btn-danger" href="{% url 'delete_location' location.id %}" role="button">DELETE</a>
+                    <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteLocationModal"
+                        role="button">DELETE</a>
+
                     {% if not location.status %}
                     <a class="btn btn-success" href="{% url 'publish_location' location.id %}" role="button">PUBLISH</a>
                     {% endif %}
                 </div>
+
             </div>
         </div>
 
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="deleteLocationModal" tabindex="-1" role="dialog" aria-labelledby="deleteLocationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-danger">
+                    <h3 class="modal-title text-light" id="deleteLocationModalLabel">Delete Location</h3>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this location?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancel</button>
+                    <a class="btn btn-danger" href="{% url 'delete_location' location.id %}" role="button">YES,
+                        Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
     {% endfor%}
 </div>
+
 
 
 {% endif %}
