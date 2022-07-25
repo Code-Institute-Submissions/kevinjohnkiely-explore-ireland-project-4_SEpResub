@@ -1,5 +1,27 @@
 # Explore Ireland
 
+<!-- Screengrab of website goes here later -->
+
 This Python & Django application is a tourism based memory sharing platform, designed to allow users to share their experiences of "The Emerald Isle". Users can upload their photos of locations and describe their experience with text and location information. Other users can also comment and like on these pictures, as well as upload their own images into the main homepage feed.
 
 It is intended to be a promotional tool for tourism in Ireland, highlighting some of the superb attractions available here, and also serve as an engaging discussion utility for users who wish to converse on their own and other users favourite locations and memories of Ireland.
+
+# UX (User Experience)
+
+## Target Audience
+The target audience for this application are potential tourists to Ireland, adults coming from a wide demographic area, who wish to explore new destinations and share their experiences with others. The application targets no particular subset of people, purely the tourist who wants to explore and is eager to advise others on their own experiences in Ireland.
+
+## User Stories
+The 2 types of user who can access this application are the Site User, and the Admin user. The Site User can utilise all the expected aspects of a image sharing application such as this, such as signing up, uploading pictures and commenting/liking. The Admin Users functionality is limited to the more administrative tasks in the backend of the application, such as moderating comments. The user stories of this application are listed as follows:
+
++ Create New Account: As a Site User I can register a new account so that I can create content and comment/like other content
++ View List of Locations: As a Site User I can view a list of location posts so that I can select one to view more details
++ View Single Location: As a Site User I can choose a single location post so that I can view the full post information
++ View Likes/Comments: As a Site User / Admin I can view the number of likes and comments on a location so that I can quickly view the popularity of a post
++ Manage My Content: As a Site User I can create, read, update or delete my own content so that I can easily manage my site content
++ Approve Comments: As an Admin User I can approve or disapprove comments so that I can monitor any questionable comments
++ Like/Unlike a Location: As a Site User I can like and unlike a location so that I can interact with the site contents
++ Add Comment to Location: As a Site User I can add a comment to a location post so that I can stay involved in the conversation
+
+## Wireframes
+The following images show wireframes of the 2 primary designs of the application. These wireframes were created using [Balsamiq Wireframes](https://balsamiq.com/).
