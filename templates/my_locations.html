@@ -29,7 +29,7 @@
                     <a class="btn btn-warning" href="{% url 'edit_location' location.id %}" role="button">EDIT</a>
                     <a class="btn btn-danger" href="{% url 'delete_location' location.id %}" role="button">DELETE</a>
                     {% if not location.status %}
-                    <a class="btn btn-success" href="{% url 'edit_location' location.id %}" role="button">PUBLISH</a>
+                    <a class="btn btn-success" href="{% url 'publish_location' location.id %}" role="button">PUBLISH</a>
                     {% endif %}
                 </div>
             </div>

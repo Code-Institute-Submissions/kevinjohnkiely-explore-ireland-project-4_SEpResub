@@ -109,7 +109,7 @@ class AddLocation(View):
             date_time = curr_time.strftime("%m/%d/%Y%H:%M:%S")
             location.slug = slugify('-'.join([location.title, date_time]))
             location.save()
-            return redirect('home')
+            return redirect('my_locations')
         else:
             location_form = LocationForm()
 
@@ -127,6 +127,14 @@ class EditLocation(UpdateView):
     model = Location
     template_name = 'edit_location.html'
     form_class = LocationForm
+
+
+def publish_location(request, location_id):
+
+    location = get_object_or_404(Location, id=location_id)
+    location.status = 1
+    location.save()
+    return redirect(reverse('home'))
 
 
 def delete_location(request, location_id):
