@@ -12,11 +12,15 @@
 <div class="container">
     <div class="row">
         <div class="col-10 mt-3 offset-1 g-0">
+            {% if user.is_authenticated %}
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.as_p}}
                 <button class="btn btn-signup right mb-2" type="submit" value="Save">Change Location</button>
             </form>
+            {% else %}
+            <h2 class="text-center">You do not have authorization to this page! Please login/signup.</h2>
+            {% endif %}
         </div>
     </div>
 </div>
