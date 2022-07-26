@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-8 offset-2">
+        <div class="col ms-auto">
             <h1 class="text-center py-4">My Locations</h1>
             <h3 class="text-center mb-4">Manage your location posts here</h3>
         </div>
@@ -18,32 +18,34 @@
 
 {% else %}
 
-<div class="container">
+<div class="container" style="width: 83%;">
     {% for location in the_locations %}
     <div class="row">
-        <div class="col-md-8 offset-2 sm-10">
-            <div class="row table-spacer">
-                <div class="col-sm-4">
-                    <h2>{{ location.title }}</h2>
+        <div class="col-ms-auto">
+            
+                <div class="row table-spacer">
+                    <div class="col-sm-4">
+                        <h2>{{ location.title }}</h2>
+                    </div>
+
+                    <div class="col-sm-8">
+                        <a class="btn btn-warning" href="{% url 'edit_location' location.id %}" role="button">EDIT</a>
+                        <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteLocationModal"
+                            role="button">DELETE</a>
+
+                        {% if not location.status %}
+                        <a class="btn btn-success" href="{% url 'publish_location' location.id %}"
+                            role="button">PUBLISH</a>
+                        {% endif %}
+                    </div>
+
                 </div>
-
-                <div class="col-sm-8">
-                    <a class="btn btn-warning" href="{% url 'edit_location' location.id %}" role="button">EDIT</a>
-                    <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteLocationModal"
-                        role="button">DELETE</a>
-
-                    {% if not location.status %}
-                    <a class="btn btn-success" href="{% url 'publish_location' location.id %}" role="button">PUBLISH</a>
-                    {% endif %}
-                </div>
-
-            </div>
+            
         </div>
-
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="deleteLocationModal" tabindex="-1" role="dialog" aria-labelledby="deleteLocationModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="deleteLocationModal" tabindex="-1" role="dialog"
+        aria-labelledby="deleteLocationModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-danger">
