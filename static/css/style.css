@@ -173,6 +173,10 @@ hr.home_hr {
     margin-bottom: 1rem;
 }
 
+.like {
+    text-align: right;
+}
+
 @media only screen and (max-width: 400px) {
     .main-site-heading {
         color: white;
