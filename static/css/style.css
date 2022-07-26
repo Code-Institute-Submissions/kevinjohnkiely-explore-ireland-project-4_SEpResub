@@ -5,6 +5,13 @@ body {
     font-family: 'Roboto', sans-serif !important;
 }
 
+.main-site-heading {
+    color: white;
+    text-align: center;
+    font-size: 5rem;
+    text-shadow: 1px 1px 10px rgb(0, 0, 0), 1px 1px 10px rgb(0, 0, 0);
+}
+
 .main_dark_green {
     background-image: linear-gradient(to right, rgb(2, 219, 46), rgb(10, 108, 1));
     border-bottom: 5px solid rgb(230, 98, 3);
@@ -38,12 +45,6 @@ hr.home_hr {
     background: url("https://res.cloudinary.com/dqp0vlv6x/image/upload/v1658824440/cliffs_home_ezgfp1.jpg") 50% 0 no-repeat fixed;
     min-height: 20rem;
     padding: 3rem;
-}
-
-.jumbotron h1 {
-    color: white;
-    font-size: 5rem;
-    text-shadow:1px 1px 10px rgb(0, 0, 0), 1px 1px 10px rgb(0, 0, 0);
 }
 
 .jumbotron h3 {
@@ -126,6 +127,7 @@ hr.home_hr {
     background-color: rgb(10, 108, 1);
     color: #fff;
     margin-bottom: 3rem;
+    margin-top: 1rem;
 }
 
 .btn-signup:hover,
@@ -170,3 +172,12 @@ hr.home_hr {
     border-bottom: 2px dotted rgb(2, 219, 46);
     margin-bottom: 1rem;
 }
+
+@media only screen and (max-width: 400px) {
+    .main-site-heading {
+        color: white;
+        text-align: center;
+        font-size: 4rem;
+        text-shadow: 1px 1px 10px rgb(0, 0, 0), 1px 1px 10px rgb(0, 0, 0);
+    }
+  }
