@@ -35,7 +35,7 @@ hr.home_hr {
 }
 
 .jumbotron {
-    background: url("/static/images/cliffs_home.jpg") 50% 0 no-repeat fixed;
+    background: url("https://res.cloudinary.com/dqp0vlv6x/image/upload/v1658824440/cliffs_home_ezgfp1.jpg") 50% 0 no-repeat fixed;
     min-height: 20rem;
     padding: 3rem;
 }
