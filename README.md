@@ -68,13 +68,13 @@ The 2 areas common to all viewports throughout the application are the header an
 
 This section is the main header of the application, incorporating a site logo to the left, and the main navbar to the right. The navbars responsiveness to different screen sizes is provided by Bootstraps media queries, and the contents of the navbar links change dependant on if the user is logged in or not. Also to the right of the logo, some welcome text appears when the user is logged in, displaying the users username and giving a good visual indication that they are successfully logged in.
 
-<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-navbar.jpg">
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features/features-navbar.jpg">
 
 ### Footer
 
 This section is similar in design to the header section, with just some basic info text centered accompanying some dummy social media icon links
 
-<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-footer.jpg">
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features/features-footer.jpg">
 
 ## Homepage
 
@@ -82,48 +82,48 @@ This section is similar in design to the header section, with just some basic in
 
 The first section of the home page content is a hero/banner image, designed for effective visual attraction to the site. The background image shows a typical Irish location, with some introductory text layed on top to give a quick description of what the site entails.
 
-<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-hero.jpg">
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features/features-hero.jpg">
 
 
 ### Location Post List
 
 The second section of the home page is the list of Location Posts with the headline "What people are sharing". This is a 3 column of grid of all posts by users, the most recent being first in the list. Each post has an image and some basic information about each post, with more info being available on clicking on each.
 
-<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-posts.jpg">
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features/features-posts.jpg">
 
 ## Location Post Page
 
 When a user clicks on an individual location, a view appears showing a larger image of the location, textual descriptions and a heart icon where the user can like or unlike this post. This section appears floated to the left, with a comment form on the right where the user can submit feedback on this location.
 
-<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-onepost.jpg">
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features/features-onepost.jpg">
 
 Below this section lies the comments section, taking up full width of page and display all relevant comment information with the most recent comment appearing at top of the list
 
-<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-comments.jpg">
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features/features-comments.jpg">
 
 ## Add/Edit Location Page
 
 This separate page allows the user to upload their own location and provides the summernote text editor if they wish to include a more customizable description of the location. The view for editing a location uses an almost identical page to this, the only differnce being the button at the bottom showing "Change Location" label. In the form, the user has the choice to publish their post, or save as a draft which they later choose to publish on site.
 
-<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-addedit.jpg">
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features/features-addedit.jpg">
 
 ## My Locations Page
 
 This page shows all the locations that a user has uploaded, and allows them to delete or edit them as they wish. It also includes a "Publish" button, which allows the user to make their post go live on the site, if they chose to save their post as a draft when they added it.
 
-<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-locations.jpg">
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features/features-locations.jpg">
 
 ## Login Page
 
 This is a standard login page using a combination of Bootstrap and a Django plugin called Crispy Forms, which enables display of a simple login form with username and password with a submit button.
 
-<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-login.jpg">
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features/features-login.jpg">
 
 ## Signup Page
 
 This is similar to the login page in terms of being produced by combining Bootstrap and Crispy Forms customization. It allows the user to enter the necessary details and displays a prompt tooltip if any of the form fields are left empty on submitting.
 
-<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-signup.jpg">
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features/features-signup.jpg">
 
 <hr>
 
