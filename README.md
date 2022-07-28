@@ -78,6 +78,15 @@ This section is similar in design to the header section, with just some basic in
 
 ## Homepage
 
+### Hero Image
+
 The first section of the home page content is a hero/banner image, designed for effective visual attraction to the site. The background image shows a typical Irish location, with some introductory text layed on top to give a quick description of what the site entails.
 
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-hero.jpg">
+
+
+### Location Post List
+
+The second section of the home page is the list of Location Posts with the headline "What people are sharing". This is a 3 column of grid of all posts by users, the most recent being first in the list. Each post has an image and some basic information about each post, with more info being available on clicking on each.
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-posts.jpg">
