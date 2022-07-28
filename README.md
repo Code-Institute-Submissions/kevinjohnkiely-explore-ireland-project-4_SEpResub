@@ -90,3 +90,9 @@ The first section of the home page content is a hero/banner image, designed for 
 The second section of the home page is the list of Location Posts with the headline "What people are sharing". This is a 3 column of grid of all posts by users, the most recent being first in the list. Each post has an image and some basic information about each post, with more info being available on clicking on each.
 
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-posts.jpg">
+
+## Location Post Page
+
+When a user clicks on an individual location, a view appears showing a larger image of the location, textual descriptions and a heart icon where the user can like or unlike this post. This section appears floated to the left, with a comment form on the right where the user can submit feedback on this location.
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-onepost.jpg">
