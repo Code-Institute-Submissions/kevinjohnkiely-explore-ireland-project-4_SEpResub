@@ -118,3 +118,9 @@ This page shows all the locations that a user has uploaded, and allows them to d
 This is a standard login page using a combination of Bootstrap and a Django plugin called Crispy Forms, which enables display of a simple login form with username and password with a submit button.
 
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-login.jpg">
+
+## Signup Page
+
+This is similar to the login page in terms of being produced by combining Bootstrap and Crispy Forms customization. It allows the user to enter the necessary details and displays a prompt tooltip if any of the form fields are left empty on submitting.
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-signup.jpg">
