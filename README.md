@@ -69,3 +69,9 @@ The 2 areas common to all viewports throughout the application are the header an
 This section is the main header of the application, incorporating a site logo to the left, and the main navbar to the right. The navbars responsiveness to different screen sizes is provided by Bootstraps media queries, and the contents of the navbar links change dependant on if the user is logged in or not. Also to the right of the logo, some welcome text appears when the user is logged in, displaying the users username and giving a good visual indication that they are successfully logged in.
 
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-navbar.jpg">
+
+### Footer
+
+This section is similar in design to the header section, with just some basic info text centered accompanying some dummy social media icon links
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-footer.jpg">
