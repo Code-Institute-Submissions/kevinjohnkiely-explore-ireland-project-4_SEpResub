@@ -75,3 +75,9 @@ This section is the main header of the application, incorporating a site logo to
 This section is similar in design to the header section, with just some basic info text centered accompanying some dummy social media icon links
 
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-footer.jpg">
+
+## Homepage
+
+The first section of the home page content is a hero/banner image, designed for effective visual attraction to the site. The background image shows a typical Irish location, with some introductory text layed on top to give a quick description of what the site entails.
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-hero.jpg">
