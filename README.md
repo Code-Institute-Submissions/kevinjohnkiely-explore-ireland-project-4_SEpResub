@@ -20,7 +20,7 @@ The 2 types of user who can access this application are the Site User, and the A
 + View List of Locations: As a Site User I can view a list of location posts so that I can select one to view more details
 + View Single Location: As a Site User I can choose a single location post so that I can view the full post information
 + View Likes/Comments: As a Site User / Admin I can view the number of likes and comments on a location so that I can quickly view the popularity of a post
-+ Manage My Content: As a Site User I can create, read, update or delete my own content so that I can easily manage my site content
++ Manage My Content: As a Site User I can create, read, update, delete or publish my own content so that I can easily manage my site content
 + Approve Comments: As an Admin User I can approve or disapprove comments so that I can monitor any questionable comments
 + Like/Unlike a Location: As a Site User I can like and unlike a location so that I can interact with the site contents
 + Add Comment to Location: As a Site User I can add a comment to a location post so that I can stay involved in the conversation
@@ -34,8 +34,16 @@ The following images show wireframes of the 2 primary designs of the application
 ### Wireframe of Location Post page
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/WireframePostPage.png">
 
+## Agile Methodology
+I used the Kanban board feature in the github project repo to layout the user stories required for this application. As I completed each sprint of work to realise a feature, I moved the user story issue across the kanban board in stages, from "To do" to "in progress" and finally "done".
+
 
 # System Design
 Once the system requirements from the Site Users perspective was finalized, a design of information flow was completed to demonstrate how the required data models were needed for the backend of this application. The following entity relationship (ER) diagram displays the relationship between 3 data models used in Explore Ireland - the User, the Location post, and the Comment. This diagram was created at (https://app.diagrams.net/).
 
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/ER_diagram.jpg">
+
+## Entity Relationships
+The relationships between the data models in this application are as follows:
++ Locations - Comments (1 To Many): A location post can have many comments
++ Users - Locations (1 To Many): A user can post many locations
