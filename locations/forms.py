@@ -8,6 +8,10 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('body',)
 
+    def __init__(self, *args, **kwargs):
+        super(CommentForm, self).__init__(*args, **kwargs)
+        self.fields['body'].label = "Your comments..."
+
 
 class LocationForm(forms.ModelForm):
     class Meta:

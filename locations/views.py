@@ -4,7 +4,7 @@ from django.views.generic import UpdateView
 from django.http import HttpResponseRedirect
 from django.utils.text import slugify
 from datetime import datetime
-from .models import Location
+from .models import Location, Comment
 from .forms import CommentForm, LocationForm
 
 
@@ -20,7 +20,6 @@ class LocationSingle(View):
     def get(self, request, location_slug, *args, **kwargs):
         queryset = Location.objects.filter(status=1)
         location = get_object_or_404(queryset, slug=location_slug)
-        # comments = location.comments.filter(comment_approved=True).order_by('created_at')
         comments = location.comments.order_by('created_at')
         post_liked = False
         if location.likes.filter(id=self.request.user.id).exists():

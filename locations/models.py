@@ -43,7 +43,6 @@ class Comment(models.Model):
     email = models.EmailField()
     body = models.TextField(max_length=150)
     created_at = models.DateTimeField(auto_now_add=True)
-    # comment_approved = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['created_at']
