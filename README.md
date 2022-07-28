@@ -124,3 +124,21 @@ This is a standard login page using a combination of Bootstrap and a Django plug
 This is similar to the login page in terms of being produced by combining Bootstrap and Crispy Forms customization. It allows the user to enter the necessary details and displays a prompt tooltip if any of the form fields are left empty on submitting.
 
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-signup.jpg">
+
+<hr>
+
+# Technologies Used
+
+The following is a list of the various technologies employed to build this project
+
++ HTML5 - Hypertext markup language used to give the website its overall structure and semantic value.
++ CSS3 - Cascading Style Sheets used to apply consistent styles across all sections of the application.
++ Bootstrap5 - CSS framework to assist in rapid site development. Augmented by some custom CSS also.
++ JavaScript - Javascript coding used sparingly to make alert messages fade out and disappear.
++ Git/Gitpod - Gitpod used as development platform to build incremental versions of the application and Git commands to backup these changes to Github.
++ Heroku - Heroku platform used for hosting the deployed application.
++ PostgreSQL - This was used as the database storage for the application, it was added as a Resource in the Heroku hosting platform settings.
++ Cloudinary - A cloud based storage platform where the location images are uploaded to and stored on.
++ Django - Python based web application framework used to build the application.
++ Font Awesome - Fontawesome toolkit imported into HTML files and its icons used to show button icons and logo.
++ Balsamiq Wireframes - Downloadable software to create the wireframe mockups.
