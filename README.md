@@ -96,3 +96,7 @@ The second section of the home page is the list of Location Posts with the headl
 When a user clicks on an individual location, a view appears showing a larger image of the location, textual descriptions and a heart icon where the user can like or unlike this post. This section appears floated to the left, with a comment form on the right where the user can submit feedback on this location.
 
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-onepost.jpg">
+
+Below this section lies the comments section, taking up full width of page and display all relevant comment information with the most recent comment appearing at top of the list
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-comments.jpg">
