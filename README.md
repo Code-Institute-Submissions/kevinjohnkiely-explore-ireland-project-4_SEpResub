@@ -29,11 +29,13 @@ The 2 types of user who can access this application are the Site User, and the A
 The following images show wireframes of the 2 primary designs of the application. These wireframes were created using [Balsamiq Wireframes](https://balsamiq.com/).
 
 ### Wireframe of Home Page of Application
-This wireframe shows the main landing page of the application, whether user is logged in or not. It gives a feel for the general layout of the page, and where the location posts will appear and in what format.
+This wireframe shows the main landing page of the application, whether user is logged in or not. It gives a feel for the general layout of the page, and where the location posts will appear and what format they will take.
+
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/WireframeHomepage.png">
 
 ### Wireframe of Location Post page
 This wireframe shows the individual location page, with the like and comment features only available to users who are logged in, blank spaces appearing in those places for users not logged in.
+
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/WireframePostPage.png">
 
 ## Agile Methodology
