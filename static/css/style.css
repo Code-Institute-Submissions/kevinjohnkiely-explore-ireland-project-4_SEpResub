@@ -52,10 +52,6 @@ hr.home_hr {
     font-size: 2.5rem;
 }
 
-.light-bg {
-    background-color: #fff;
-}
-
 .dark-bg {
     background-color: rgb(10, 108, 1)
 }
@@ -115,11 +111,6 @@ hr.home_hr {
     margin-left: 5%;
 }
 
-.location-subtitle {
-    margin-left: 5%;
-    color: lightgray;
-}
-
 .btn-signup {
     background-color: rgb(10, 108, 1);
     color: #fff;
@@ -146,14 +137,14 @@ hr.home_hr {
 }
 
 .btn-like {
-    color: #E84610;
+    color: rgb(230, 98, 3);
     border: none;
     background: transparent;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: rgb(230, 98, 3);
     background: transparent;
     border: none;
 }
