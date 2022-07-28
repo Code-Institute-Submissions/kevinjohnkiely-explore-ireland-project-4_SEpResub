@@ -12,7 +12,7 @@ body {
     text-shadow: 1px 1px 10px rgb(0, 0, 0), 1px 1px 10px rgb(0, 0, 0);
 }
 
-.main_dark_green {
+.bg-gradient-dark-greens {
     background-image: linear-gradient(to right, rgb(2, 219, 46), rgb(10, 108, 1));
     border-bottom: 5px solid rgb(230, 98, 3);
 }
