@@ -8,6 +8,8 @@ This Python & Django application is a tourism based memory sharing platform, des
 
 It is intended to be a promotional tool for tourism in Ireland, highlighting some of the superb attractions available here, and also serve as an engaging discussion utility for users who wish to converse on their own and other users favourite locations and memories of Ireland.
 
+<hr>
+
 # UX (User Experience)
 
 ## Target Audience
@@ -43,6 +45,7 @@ I used the Kanban board feature in the github project repo to layout the user st
 
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/agile.jpg">
 
+<hr>
 
 # System Design
 Once the system requirements from the Site Users perspective was finalized, a design of information flow was completed to demonstrate how the required data models were needed for the backend of this application. The following entity relationship (ER) diagram displays the relationship between 3 data models used in Explore Ireland - the User, the Location post, and the Comment. This diagram was created at (https://app.diagrams.net/).
@@ -53,3 +56,16 @@ Once the system requirements from the Site Users perspective was finalized, a de
 The relationships between the data models in this application are as follows:
 + Locations - Comments (1 To Many): A location post can have many comments
 + Users - Locations (1 To Many): A user can post many locations
+
+<hr>
+
+# Application Features
+
+## Base Template
+The 2 areas common to all viewports throughout the application are the header and footer sections, which were coded into a "base.html" template in the django framework and thus appear commonly across the site.
+
+### Header
+
+This section is the main header of the application, incorporating a site logo to the left, and the main navbar to the right. The navbars responsiveness to different screen sizes is provided by Bootstraps media queries, and the contents of the navbar links change dependant on if the user is logged in or not. Also to the right of the logo, some welcome text appears when the user is logged in, displaying the users username and giving a good visual indication that they are successfully logged in.
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-navbar.jpg">
