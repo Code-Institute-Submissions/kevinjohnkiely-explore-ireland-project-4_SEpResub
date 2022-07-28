@@ -37,6 +37,8 @@ The following images show wireframes of the 2 primary designs of the application
 ## Agile Methodology
 I used the Kanban board feature in the github project repo to layout the user stories required for this application. As I completed each sprint of work to realise a feature, I moved the user story issue across the kanban board in stages, from "To do" to "in progress" and finally "done".
 
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/agile.jpg">
+
 
 # System Design
 Once the system requirements from the Site Users perspective was finalized, a design of information flow was completed to demonstrate how the required data models were needed for the backend of this application. The following entity relationship (ER) diagram displays the relationship between 3 data models used in Explore Ireland - the User, the Location post, and the Comment. This diagram was created at (https://app.diagrams.net/).
