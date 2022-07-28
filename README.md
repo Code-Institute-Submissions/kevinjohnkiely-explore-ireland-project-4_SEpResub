@@ -112,3 +112,9 @@ This separate page allows the user to upload their own location and provides the
 This page shows all the locations that a user has uploaded, and allows them to delete or edit them as they wish. It also includes a "Publish" button, which allows the user to make their post go live on the site, if they chose to save their post as a draft when they added it.
 
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-locations.jpg">
+
+## Login Page
+
+This is a standard login page using a combination of Bootstrap and a Django plugin called Crispy Forms, which enables display of a simple login form with username and password with a submit button.
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-login.jpg">
