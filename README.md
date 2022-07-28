@@ -100,3 +100,9 @@ When a user clicks on an individual location, a view appears showing a larger im
 Below this section lies the comments section, taking up full width of page and display all relevant comment information with the most recent comment appearing at top of the list
 
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-comments.jpg">
+
+## Add/Edit Location Page
+
+This separate page allows the user to upload their own location and provides the summernote text editor if they wish to include a more customizable description of the location. The view for editing a location uses an almost identical page to this, the only differnce being the button at the bottom showing "Change Location" label.
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/features-addedit.jpg">
