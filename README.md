@@ -201,3 +201,9 @@ I tested this application so that it would scale well on all screen sizes, using
 The items stack on top of each other on smallest screens, and on medium screen breakpoints the horizontal menu changes into the standard Bootstrap menu icon, which when clicked the menu items pop out vertically. The Hero image section scales well on smaller screens with the background image and necessary margins resizing for small screen sizes.
 
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/responsive/responsive-home.jpg">
+
+### List of Locations
+
+On larger screen sizes this is a 3 column grid of location post details, however on medium to small screen sizes this scales back to a 1 column display.
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/responsive/responsive-posts.jpg">
