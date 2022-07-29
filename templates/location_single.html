@@ -39,9 +39,9 @@
             <div class="card-body">
                 <div class="image-container">
                     {% if "placeholder_image" in location.location_image.url %}
-                    <img class="card-img-top card-border" src="{% static 'images/cliffs.jpg' %}">
+                    <img class="card-img-top card-border" src="{% static 'images/cliffs.jpg' %}" alt="Explore Ireland" >
                     {% else %}
-                    <img class="card-img-top card-border" src=" {{ location.location_image.url }}">
+                    <img class="card-img-top card-border" src=" {{ location.location_image.url }}" alt="Explore Ireland" >
                     {% endif %}
                 </div>
                 <p class="post-subtitle">{{ location.creator }} | {{ location.created_at }}</p>
