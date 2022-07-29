@@ -165,3 +165,8 @@ All of these issues were fixed and the site now complies with HTML standards.
 There was no need to test the Bootstrap supplied css of this project, however I used a custom css file to supplement these rules located at static/css/style.css. I used the online CSS Validator at (https://jigsaw.w3.org/css-validator) to test the CSS of the application, using the "by direct input" option to copy and paste in the CSS code.
 
 No errors were found during this validation.
+
+## Javascript Validation
+I used the online validator at (https://jshint.com/) to test the very small amount of Javascript included in this application, the script code to allow the bootstrap alert messages to fade out after appearing. No errors were reported after validation.
+
+## Python Validation
