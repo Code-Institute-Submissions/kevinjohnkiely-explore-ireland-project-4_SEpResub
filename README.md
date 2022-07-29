@@ -160,3 +160,8 @@ I used the online validator at (https://validator.w3.org/) to check the HTML of 
 The last error took some investigation as it did not appear in the template code. However, I discovered that it originated in the summernote text editor, when text describing the location was copied and pasted in from another source, some unintended html tags were also copied in. This was solved by editing the location description in the summernote editor, using the "Code View" button to help remove unwanted html tags.
 
 All of these issues were fixed and the site now complies with HTML standards.
+
+## CSS Validation
+There was no need to test the Bootstrap supplied css of this project, however I used a custom css file to supplement these rules located at static/css/style.css. I used the online CSS Validator at (https://jigsaw.w3.org/css-validator) to test the CSS of the application, using the "by direct input" option to copy and paste in the CSS code.
+
+No errors were found during this validation.
