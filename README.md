@@ -170,3 +170,12 @@ No errors were found during this validation.
 I used the online validator at (https://jshint.com/) to test the very small amount of Javascript included in this application, the script code to allow the bootstrap alert messages to fade out after appearing. No errors were reported after validation.
 
 ## Python Validation
+I used the online Python validator at (http://pep8online.com/) to verify all the custom Python code and files that I added to the application. The files within the system that were validated are as follows
++ exploreireland/urls.py
++ locations/admin.py
++ locations/forms.py
++ locations/models.py
++ locations/urls.py
++ locations/views.py
+
+The only issues that showed up during validation were common complaints such as trailing whitespaces and lines too long. I formatted all documents and they all now compy with the Pep8 validations.

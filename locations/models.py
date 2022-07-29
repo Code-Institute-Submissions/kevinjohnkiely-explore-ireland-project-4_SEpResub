@@ -5,23 +5,27 @@ from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 REGION_OPTIONS = (
-    ('Connaught','Connaught'),
+    ('Connaught', 'Connaught'),
     ('Leinster', 'Leinster'),
-    ('Munster','Munster'),
-    ('Ulster','Ulster'),
+    ('Munster', 'Munster'),
+    ('Ulster', 'Ulster'),
 )
+
 
 class Location(models.Model):
     title = models.CharField(max_length=150)
     slug = models.SlugField(max_length=150)
-    creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name="location_posts")
+    creator = models.ForeignKey(User, on_delete=models.CASCADE,
+                                related_name="location_posts")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    region = models.CharField(max_length=20, choices=REGION_OPTIONS, blank=True)
+    region = models.CharField(max_length=20,
+                              choices=REGION_OPTIONS, blank=True)
     body = models.TextField()
     location_image = CloudinaryField('image', default='placeholder_image')
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User, related_name='location_likes', blank=True)
+    likes = models.ManyToManyField(User, related_name='location_likes', 
+                                   blank=True)
 
     class Meta:
         ordering = ['-created_at']
@@ -37,7 +41,8 @@ class Location(models.Model):
 
 
 class Comment(models.Model):
-    location = models.ForeignKey(Location, on_delete=models.CASCADE, related_name='comments')
+    location = models.ForeignKey(Location, on_delete=models.CASCADE, 
+        related_name='comments')
     name = models.CharField(max_length=100)
     email = models.EmailField()
     body = models.TextField(max_length=150)

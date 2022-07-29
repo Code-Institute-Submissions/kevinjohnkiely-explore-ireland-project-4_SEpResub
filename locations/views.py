@@ -39,7 +39,6 @@ class LocationSingle(View):
     def post(self, request, location_slug, *args, **kwargs):
         queryset = Location.objects.filter(status=1)
         location = get_object_or_404(queryset, slug=location_slug)
-        # comments = location.comments.filter(comment_approved=True).order_by('created_at')
         comments = location.comments.order_by('created_at')
         post_liked = False
         if location.likes.filter(id=self.request.user.id).exists():
@@ -67,6 +66,7 @@ class LocationSingle(View):
             }
         )
 
+
 class LocationLike(View):
 
     def post(self, request, slug):
@@ -83,10 +83,11 @@ class LocationLike(View):
 class MyLocations(View):
     def get(self, request):
         if request.user.is_authenticated:
-            the_locations = Location.objects.filter(creator=request.user).order_by('-created_at')
-            
+            the_locations = Location.objects.filter(
+                creator=request.user).order_by('-created_at')
+
             return render(
-                request, 'my_locations.html', {"the_locations": the_locations, })
+                request, 'my_locations.html', {"the_locations": the_locations})
         else:
             return render(request, 'my_locations.html')
 
@@ -122,7 +123,7 @@ class AddLocation(View):
 
 
 class EditLocation(UpdateView):
-    
+
     model = Location
     template_name = 'edit_location.html'
     form_class = LocationForm

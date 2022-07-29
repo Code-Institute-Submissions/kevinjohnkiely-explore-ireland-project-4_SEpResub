@@ -22,3 +22,4 @@ urlpatterns = [
     path('', include('locations.urls'), name='location_urls'),
     path('accounts/', include('allauth.urls')),
 ]
+
