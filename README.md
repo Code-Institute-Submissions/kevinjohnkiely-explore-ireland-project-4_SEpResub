@@ -179,3 +179,25 @@ I used the online Python validator at (http://pep8online.com/) to verify all the
 + locations/views.py
 
 The only issues that showed up during validation were common complaints such as trailing whitespaces and lines too long. I formatted all documents and they all now compy with the Pep8 validations.
+
+<hr>
+
+# Testing
+
+## Cross Browser Testing
+
+The application was functionally tested across the 3 web browsers, Google Chrome, Microsoft Edge & Mozilla Firefox. The site loaded consistently across all 3 and no issues were detected on any browser.
+
+## Compatibility Testing
+
+I tested the site across different devices, such as the Nokia 4.2 smartphone with Android 11, Lenovo Ideapad 3 laptop with different browsers on Windows 11, and on a Dell Studio laptop with different browsers on a Linux Mint operating system. No issues were reported between these devices.
+
+## Responsiveness Testing
+
+I tested this application so that it would scale well on all screen sizes, using Chrome Developer Tools to regularly test the layouts during development. The Bootstrap CSS framework provided all the breakpoints, and the key features of the application respond on smaller sceen sizes as follows:
+
+### Header/Navbar/Hero Image
+
+The items stack on top of each other on smallest screens, and on medium screen breakpoints the horizontal menu changes into the standard Bootstrap menu icon, which when clicked the menu items pop out vertically. The Hero image section scales well on smaller screens with the background image and necessary margins resizing for small screen sizes.
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/responsive/responsive-home.jpg">
