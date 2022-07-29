@@ -142,3 +142,21 @@ The following is a list of the various technologies employed to build this proje
 + Django - Python based web application framework used to build the application.
 + Font Awesome - Fontawesome toolkit imported into HTML files and its icons used to show button icons and logo.
 + Balsamiq Wireframes - Downloadable software to create the wireframe mockups.
+
+<hr>
+
+# Code Validation
+
+## HTML Validation
+I used the online validator at (https://validator.w3.org/) to check the HTML of the application. All of the applications frontend views were checked, with warnings/errors as follows:
+
+### Homepage
++ Consider adding a lang attribute to the html start tag to declare the language of this document. (This warning appeared for all pages across the site as it originates in the base HTML template and thus affects all views)
++ An img element must have an alt attribute
+
+### Single Location Page
++ No p element in scope but a p end tag seen.
+
+The last error took some investigation as it did not appear in the template code. However, I discovered that it originated in the summernote text editor, when text describing the location was copied and pasted in from another source, some unintended html tags were also copied in. This was solved by editing the location description in the summernote editor, using the "Code View" button to help remove unwanted html tags.
+
+All of these issues were fixed and the site now complies with HTML standards.
