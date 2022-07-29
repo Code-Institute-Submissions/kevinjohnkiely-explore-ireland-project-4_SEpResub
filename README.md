@@ -1,6 +1,6 @@
 # Explore Ireland
 
-<!-- Screengrab of website goes here later -->
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/exploreireland.jpg">
 
 Live link to Application: (https://explore-ireland.herokuapp.com/)
 
