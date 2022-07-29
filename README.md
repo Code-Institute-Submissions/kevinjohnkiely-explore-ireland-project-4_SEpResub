@@ -207,3 +207,9 @@ The items stack on top of each other on smallest screens, and on medium screen b
 On larger screen sizes this is a 3 column grid of location post details, however on medium to small screen sizes this scales back to a 1 column display.
 
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/responsive/responsive-posts.jpg">
+
+### My Locations Page
+
+On larger screen sizes, the location name is listed with the respective edit/delete/publish buttons on the right on the same row, but on smaller screens the buttons stack up underneath this row.
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/responsive/responsive-locations.jpg">
