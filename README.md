@@ -224,4 +224,8 @@ On near completion of the application I used Google Chromes Lighthouse feature t
 
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/lighthouse-before.jpg">
 
-I was happy with most of those scores, but the 75 for Best Practices required some further investigation.
+I was happy with most of those scores, but the 75 for Best Practices required some further investigation. The error message provided was "Mixed Content: The page at 'https://explore-ireland.herokuapp.com/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?".
+
+I fixed this issue by removing the imported Google Font and using the native Bootstrap version, there was very little difference between these font styles in any case. This resulted in a much higher score for Best Practices:
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/lighthouse-after.jpg">
