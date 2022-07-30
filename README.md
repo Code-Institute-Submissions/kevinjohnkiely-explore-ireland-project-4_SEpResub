@@ -218,6 +218,18 @@ On larger screen sizes, the location name is listed with the respective edit/del
 
 On smaller screen sizes, all content stacks up into one column, the location details and image first, next comes the comment form, and finally the already submitted comments below this.
 
+## User Testing
+
+This application was tested by another person and I noted their comments and experience using the system. Overall, they found it a quite usable and pleasant experience, but discovered one bug that is later explained in the Errors and Bugs section (page not found).
+
+To ensure a easy user experience, it was vital to use form validation throughout the application to ensure that no empty data was being submitted by the user, by use of the "required" HTML attribute on the form input fields, the user being made aware of this as follows:
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/form-validation.jpg">
+
+Also an important aspect of the user experience was to ensure that a user did not accidentally delete some of their content. On the My Locations page, the user is presented with a list of their own uploaded locations and a button to delete a location if they wish. Once the user clicks delete, a popup modal appears asking if they are sure they want to carry this out:
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/form-modal.jpg">
+
 ## Performance Testing
 
 On near completion of the application I used Google Chromes Lighthouse feature to test the application peformance, the results seen below:
