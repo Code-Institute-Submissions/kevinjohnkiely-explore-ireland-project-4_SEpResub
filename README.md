@@ -213,3 +213,15 @@ On larger screen sizes this is a 3 column grid of location post details, however
 On larger screen sizes, the location name is listed with the respective edit/delete/publish buttons on the right on the same row, but on smaller screens the buttons stack up underneath this row.
 
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/responsive/responsive-locations.jpg">
+
+### Single Location Page
+
+On smaller screen sizes, all content stacks up into one column, the location details and image first, next comes the comment form, and finally the already submitted comments below this.
+
+## Performance Testing
+
+On near completion of the application I used Google Chromes Lighthouse feature to test the application peformance, the results seen below:
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/lighthouse-before.jpg">
+
+I was happy with most of those scores, but the 75 for Best Practices required some further investigation.
