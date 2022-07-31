@@ -241,3 +241,13 @@ I was happy with most of those scores, but the 75 for Best Practices required so
 I fixed this issue by removing the imported Google Font and using the native Bootstrap version, there was very little difference between these font styles in any case. This resulted in a much higher score for Best Practices:
 
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/lighthouse-after.jpg">
+
+<hr>
+
+# Bugs & Errors
+
+I encountered a number of bugs during the development of this project, thankfully I was able to resolve all of these issues after some time investigating.
+
+## Page Not Found
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/bugs/bug-no-route.jpg">

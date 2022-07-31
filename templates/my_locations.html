@@ -25,7 +25,11 @@
             
                 <div class="row table-spacer">
                     <div class="col-sm-4">
+                        {% if not location.status %}
+                        <h2 class="card-title">{{ location.title }}</h2>
+                        {% else %}
                         <a href="{% url 'location_single' location.slug %}" class="post-link"><h2 class="card-title">{{ location.title }}</h2></a>
+                        {% endif %}
                     </div>
 
                     <div class="col-sm-8">
