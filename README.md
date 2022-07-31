@@ -250,4 +250,14 @@ I encountered a number of bugs during the development of this project, thankfull
 
 ## Page Not Found
 
+On the My Locations page, there is a list of the users uploaded locations and buttons to edit/publish the post. The title of each of these locations is also a link to that individual post page, and it was discovered in user testing that this link was broken if the location had not been published yet.
+
 <img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/bugs/bug-no-route.jpg">
+
+To fix this I added some conditional python code to load an alternative location title heading, one without the hyperlink so that the broken link will never be rendered to the view:
+
+    {% if not location.status %}
+        <h2 class="card-title">{{ location.title }}</h2>
+    {% else %}
+        <a href="{% url 'location_single' location.slug %}" class="post-link"><h2 class="card-title">{{ location.title }}</h2></a>
+    {% endif %}
