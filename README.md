@@ -273,3 +273,31 @@ To fix this, I needed to give each location post a unique slug, despite having t
     curr_time = datetime.now()
     date_time = curr_time.strftime("%m/%d/%Y%H:%M:%S")
     location.slug = slugify('-'.join([location.title, date_time]))
+
+## Hero Image Missing
+
+On my first deployment of the application to the Heroku hosting platform, I noticed that the hero/banner image on the homepage was missing, despite showing up fine on my local development environment on Gitpod. On discussion with my project mentor I diagnosed that this was an issue with the Cloudinary host not recognising images that were referenced as background images in css coming from the static folder, and this was solved by uploading the image to cloudinary, and using that file link in the css file instead, as follows:
+
+    .jumbotron {
+    background: url("https://res.cloudinary.com/dqp0vlv6x/image/upload/v1658824440/cliffs_home_ezgfp1.jpg") 50% 0 no-repeat fixed;
+    min-height: 20rem;
+    padding: 3rem;
+    }
+
+<hr>
+
+# Considerations for Improvements
+
+The following is a list of aspects of the application that could be added or improved upon, which could not be achieved due to time constraints.
+
++ CRUD Functionality on Comments - The user would be able to update or delete the comments they have made on location posts, similar to how they do it on their uploaded locations.
++ Search Functions - A user could search for posts by location, a utility that would be of much more usefulness once the application was populated by lots of varying content by multiple users.
++ Integration of Google Maps - A Google Maps API could be incorporated to load in each location single post page to give clear directions of where the place is in Ireland.
+
+<hr>
+
+# Deployment Methodology
+
+To deploy this application to Heroku, I closely followed the very helpful Django Cheat Sheet (https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit) supplied by Code Institute for this project.
+
+Whenever I needed to change something from the deployed version, I would navigate to the settings file and change the DEBUG variable to True so that the application would run without bugs on Gitpod, and change back to False before deploying once again to Heroku.
