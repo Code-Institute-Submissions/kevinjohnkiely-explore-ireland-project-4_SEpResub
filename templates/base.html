@@ -4,7 +4,12 @@
 <html class="h-100" lang="en">
 
 <head>
-    <title>Explore Ireland - Share Your Moments</title>
+    <title>Explore Ireland - Share Your Moments!</title>
+
+    <meta name="description" content="A location sharing social website where people can share their memories of Ireland!">
+    <meta name="keywords" content="Ireland, Tourism, Travel, Memories, Sharing, Locations, Staycations">
+    <meta name="author" content="Kevin Kiely">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -26,7 +31,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark-greens py-sm-5 px-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}">EXPLORE <i class="fas fa-street-view"></i> <strong>IRELAND</strong></a>
+            <a class="navbar-brand" href="{% url 'home' %}">EXPLORE <i class="fas fa-street-view"></i>
+                <strong>IRELAND</strong></a>
             {% if user.is_authenticated %}
             <span class="welcome-note">Welcome back, <strong class="text-light">{{ user.username }}</strong></span>
             {% endif %}
