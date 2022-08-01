@@ -300,4 +300,11 @@ The following is a list of aspects of the application that could be added or imp
 
 To deploy this application to Heroku, I closely followed the very helpful Django Cheat Sheet (https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit) supplied by Code Institute for this project.
 
-Whenever I needed to change something from the deployed version, I would navigate to the settings file and change the DEBUG variable to True so that the application would run without bugs on Gitpod, and change back to False before deploying once again to Heroku.
+Whenever I needed to change something from the deployed version, I would navigate to the settings file and change the DEBUG variable to True so that the application would run without errors on Gitpod, and change back to False before deploying once again to Heroku.
+
+<hr>
+
+# Credits
+
++ All image content for this application came from Pexels (https://www.pexels.com/)
++ The code used to give each location a unique slug using timestamps was sourced from Stack Overflow (https://stackoverflow.com/)
