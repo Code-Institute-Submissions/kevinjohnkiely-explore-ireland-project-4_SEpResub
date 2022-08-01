@@ -18,14 +18,18 @@ The target audience for this application are potential tourists to Ireland, adul
 ## User Stories
 The 2 types of user who can access this application are the Site User, and the Admin user. The Site User can utilise all the expected aspects of a image sharing application such as this, such as signing up, uploading pictures and commenting/liking. The Admin Users functionality is limited to the more administrative tasks in the backend of the application, such as moderating comments. The user stories of this application are listed as follows:
 
+### User Stories for Site User
+
 + Create New Account: As a Site User I can register a new account so that I can create content and comment/like other content
 + View List of Locations: As a Site User I can view a list of location posts so that I can select one to view more details
 + View Single Location: As a Site User I can choose a single location post so that I can view the full post information
-+ View Likes/Comments: As a Site User / Admin I can view the number of likes and comments on a location so that I can quickly view the popularity of a post
++ View Likes/Comments: As a Site User I can view the number of likes and comments on a location so that I can quickly view the popularity of a post
 + Manage My Content: As a Site User I can create, read, update, delete or publish my own content so that I can easily manage my site content
-+ Approve Comments: As an Admin User I can approve or disapprove comments so that I can monitor any questionable comments
 + Like/Unlike a Location: As a Site User I can like and unlike a location so that I can interact with the site contents
 + Add Comment to Location: As a Site User I can add a comment to a location post so that I can stay involved in the conversation
+
+### User Stories for Admin User
++ Approve Comments: As an Admin User I can approve or disapprove comments so that I can monitor any questionable comments
 
 ## Wireframes
 The following images show wireframes of the 2 primary designs of the application. These wireframes were created using [Balsamiq Wireframes](https://balsamiq.com/).
