@@ -261,3 +261,15 @@ To fix this I added some conditional python code to load an alternative location
     {% else %}
         <a href="{% url 'location_single' location.slug %}" class="post-link"><h2 class="card-title">{{ location.title }}</h2></a>
     {% endif %}
+
+## Duplicate Slug 
+
+When a user creates a new location post, I wanted it to be possible for a user to supply a location title that could be repeated in a later post, or for another user to upload a similar location with the same title, example "Cliffs of Moher". This was made possible by not setting the title field in the model to be unique. It was possible to upload the duplicate locations, but on clicking the link for this location, an error occurred relating the slug of the post as follows:
+
+<img src="https://github.com/kevinjohnkiely/explore-ireland-project-4/blob/main/screenshotsWireframes/bugs/bug-multiple.jpg">
+
+To fix this, I needed to give each location post a unique slug, despite having the same location title. Thus I added the following code, appending a timestamp to the location slug. I realise this is not a complete solution as it is possible, although highly unlikely, that 2 separate users could upload a location with the same title at the exact same second in time (similar timestamp), but I felt this was a good enough solution for this project.
+
+    curr_time = datetime.now()
+    date_time = curr_time.strftime("%m/%d/%Y%H:%M:%S")
+    location.slug = slugify('-'.join([location.title, date_time]))
