@@ -4,6 +4,10 @@ from django_summernote.widgets import SummernoteWidget
 
 
 class CommentForm(forms.ModelForm):
+    """
+    This class sets up the Comment Form and allows some
+    customizations of attributes
+    """
     class Meta:
         model = Comment
         fields = ('body',)
@@ -14,6 +18,10 @@ class CommentForm(forms.ModelForm):
 
 
 class LocationForm(forms.ModelForm):
+    """
+    This class sets up the Location Form and allows some
+    customizations of attributes
+    """
     class Meta:
         model = Location
         fields = ('title', 'region', 'body', 'location_image', 'status')

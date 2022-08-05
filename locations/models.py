@@ -13,6 +13,9 @@ REGION_OPTIONS = (
 
 
 class Location(models.Model):
+    """
+    This class specifies the fields in the Location model and their rules
+    """
     title = models.CharField(max_length=150)
     slug = models.SlugField(max_length=150)
     creator = models.ForeignKey(User, on_delete=models.CASCADE,
@@ -41,6 +44,9 @@ class Location(models.Model):
 
 
 class Comment(models.Model):
+    """
+    This class specifies the fields in the Comment model and their rules
+    """
     location = models.ForeignKey(Location, on_delete=models.CASCADE, 
         related_name='comments')
     name = models.CharField(max_length=100)

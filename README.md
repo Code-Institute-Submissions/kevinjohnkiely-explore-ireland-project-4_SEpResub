@@ -8,6 +8,8 @@ This Python & Django application is a tourism based memory sharing platform, des
 
 It is intended to be a promotional tool for tourism in Ireland, highlighting some of the superb attractions available here, and also serve as an engaging discussion utility for users who wish to converse on their own and other users favourite locations and memories of Ireland.
 
+# Table of Contents
+
 - [Explore Ireland](#explore-ireland)
   * [Login Details to Test Application](#login-details-to-test-application)
 - [UX (User Experience)](#ux--user-experience-)
