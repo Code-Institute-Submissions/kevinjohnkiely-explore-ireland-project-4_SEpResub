@@ -8,6 +8,63 @@ This Python & Django application is a tourism based memory sharing platform, des
 
 It is intended to be a promotional tool for tourism in Ireland, highlighting some of the superb attractions available here, and also serve as an engaging discussion utility for users who wish to converse on their own and other users favourite locations and memories of Ireland.
 
+- [Explore Ireland](#explore-ireland)
+  * [Login Details to Test Application](#login-details-to-test-application)
+- [UX (User Experience)](#ux--user-experience-)
+  * [Target Audience](#target-audience)
+  * [User Stories](#user-stories)
+    + [User Stories for Site User](#user-stories-for-site-user)
+    + [User Stories for Admin User](#user-stories-for-admin-user)
+  * [Wireframes](#wireframes)
+    + [Wireframe of Home Page of Application](#wireframe-of-home-page-of-application)
+    + [Wireframe of Location Post page](#wireframe-of-location-post-page)
+  * [Agile Methodology](#agile-methodology)
+- [System Design](#system-design)
+  * [Entity Relationships](#entity-relationships)
+- [Application Features](#application-features)
+  * [Base Template](#base-template)
+    + [Header](#header)
+    + [Footer](#footer)
+  * [Homepage](#homepage)
+    + [Hero Image](#hero-image)
+    + [Location Post List](#location-post-list)
+  * [Location Post Page](#location-post-page)
+  * [Add/Edit Location Page](#add-edit-location-page)
+  * [My Locations Page](#my-locations-page)
+  * [Login Page](#login-page)
+  * [Signup Page](#signup-page)
+- [Technologies Used](#technologies-used)
+- [Code Validation](#code-validation)
+  * [HTML Validation](#html-validation)
+    + [Homepage](#homepage-1)
+    + [Single Location Page](#single-location-page)
+  * [CSS Validation](#css-validation)
+  * [Javascript Validation](#javascript-validation)
+  * [Python Validation](#python-validation)
+- [Testing](#testing)
+  * [Cross Browser Testing](#cross-browser-testing)
+  * [Compatibility Testing](#compatibility-testing)
+  * [Responsiveness Testing](#responsiveness-testing)
+    + [Header/Navbar/Hero Image](#header-navbar-hero-image)
+    + [List of Locations](#list-of-locations)
+    + [My Locations Page](#my-locations-page-1)
+    + [Single Location Page](#single-location-page-1)
+  * [User Testing](#user-testing)
+  * [Performance Testing](#performance-testing)
+- [Bugs & Errors](#bugs---errors)
+  * [Page Not Found](#page-not-found)
+  * [Duplicate Slug](#duplicate-slug)
+  * [Hero Image Missing](#hero-image-missing)
+- [Considerations for Improvements](#considerations-for-improvements)
+- [Deployment Methodology](#deployment-methodology)
+- [Credits](#credits)
+
+
+## Login Details to Test Application
+
+Username: kevin
+Password: test12345
+
 <hr>
 
 # UX (User Experience)
