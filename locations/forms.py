@@ -14,7 +14,7 @@ class CommentForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(CommentForm, self).__init__(*args, **kwargs)
-        self.fields['body'].label = "Your comments..."
+        self.fields['body'].label = "Your Comments..."
 
 
 class LocationForm(forms.ModelForm):
@@ -31,7 +31,8 @@ class LocationForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(LocationForm, self).__init__(*args, **kwargs)
+        self.fields['body'].label = "Location Description"
         self.fields[
             'location_image'
-            ].label = "Please upload a photo of location here!"
+            ].label = "Please upload a photo of location here! (Optional)"
         self.fields['status'].label = "Publish or Save Draft"

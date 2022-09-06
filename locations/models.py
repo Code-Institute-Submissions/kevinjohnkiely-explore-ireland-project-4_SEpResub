@@ -23,7 +23,7 @@ class Location(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     region = models.CharField(max_length=20,
-                              choices=REGION_OPTIONS, blank=True)
+                              choices=REGION_OPTIONS, blank=False)
     body = models.TextField()
     location_image = CloudinaryField('image', default='placeholder_image')
     status = models.IntegerField(choices=STATUS, default=0)

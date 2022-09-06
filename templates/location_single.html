@@ -12,6 +12,7 @@
             <div class="row mt-3">
                 <div class="col-md-8">
                     <h1 class="location-title">{{ location.title }}</h1>
+                    
                 </div>
                 <div class="col-md-4 d-flex justify-content-end">
                     <strong>
@@ -45,7 +46,8 @@
                     {% endif %}
                 </div>
                 <p class="post-subtitle">{{ location.creator }} | {{ location.created_at }}</p>
-                <p class="card-text ">{{ location.body | safe }}</p>
+                <p class="card-text">Region: {{ location.region }}</p>
+                <p class="card-text">{{ location.body | safe }}</p>
             </div>
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">

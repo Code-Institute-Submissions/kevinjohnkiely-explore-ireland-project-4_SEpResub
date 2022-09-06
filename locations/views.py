@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.views.generic import UpdateView
 from django.http import HttpResponseRedirect
 from django.utils.text import slugify
+from django.contrib import messages
 from datetime import datetime
 from .models import Location, Comment
 from .forms import CommentForm, LocationForm
@@ -138,6 +139,7 @@ class AddLocation(View):
             location.save()
             return redirect('my_locations')
         else:
+            messages.add_message(request, 30, 'Description Empty! Try again.')
             location_form = LocationForm()
 
         return render(
