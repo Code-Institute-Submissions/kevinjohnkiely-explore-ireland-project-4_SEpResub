@@ -34,7 +34,7 @@
 
                     <div class="col-sm-8">
                         <a class="btn btn-warning" href="{% url 'edit_location' location.id %}" role="button">EDIT</a>
-                        <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteLocationModal"
+                        <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteLocationModal-{{location.id}}"
                             role="button">DELETE</a>
 
                         {% if not location.status %}
@@ -48,7 +48,7 @@
         </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="deleteLocationModal" tabindex="-1" role="dialog"
+    <div class="modal fade" id="deleteLocationModal-{{location.id}}" tabindex="-1" role="dialog"
         aria-labelledby="deleteLocationModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
