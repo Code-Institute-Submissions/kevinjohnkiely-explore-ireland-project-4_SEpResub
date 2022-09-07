@@ -43,6 +43,22 @@ class Location(models.Model):
         return reverse('my_locations')
 
 
+class Profile(models.Model):
+    """ This class specifies the user profile model """
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        primary_key=True,
+    )
+    full_name = models.CharField(max_length=150)
+    location = models.CharField(max_length=150)
+    profile_pic = CloudinaryField('image', default='placeholder_profile_image')
+    slug = models.SlugField(max_length=150)
+
+    def __str__(self):
+        return self.full_name
+
+
 class Comment(models.Model):
     """
     This class specifies the fields in the Comment model and their rules
