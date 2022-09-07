@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+{% load cloudinary %}
+
+{% load crispy_forms_tags%}
+
+<!-- LOCATION FORM -->
+<div class="container">
+    <div class="row">
+        <div class="col-10 mt-3 offset-1 g-0">
+            {% if user.is_authenticated %}
+                {% if not the_profile %}            
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ profile_form | crispy }}
+                        <button class="btn btn-signup right my-4" type="submit" value="Save">Add Your Profile</button>
+                    </form>
+                {% else %}
+                    <h2 class="text-center">Profile already created! View it <a href="{% url 'my_profile' %}">here.</a></h2>
+                {% endif %}
+            {% else %}
+            <h2 class="text-center">You do not have authorization to this page! Please login/signup.</h2>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

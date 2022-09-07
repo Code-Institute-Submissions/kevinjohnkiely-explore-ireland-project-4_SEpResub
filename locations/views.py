@@ -5,8 +5,8 @@ from django.http import HttpResponseRedirect
 from django.utils.text import slugify
 from django.contrib import messages
 from datetime import datetime
-from .models import Location, Comment
-from .forms import CommentForm, LocationForm
+from .models import Location, Comment, Profile
+from .forms import CommentForm, LocationForm, ProfileForm
 
 
 class LocationList(generic.ListView):
@@ -147,6 +147,64 @@ class AddLocation(View):
             "add_location.html",
             {
                 "location_form": location_form
+            },
+        )
+
+
+class MyProfile(View):
+    """
+    This class allows display of user profile
+    """
+    def get(self, request):
+        """
+        This methods gets the list of user profiles
+        """
+        if request.user.is_authenticated:
+            the_profiles = Profile.objects.filter(
+                user=request.user)
+
+            return render(
+                request, 'my_profile.html', {"the_profiles": the_profiles})
+        else:
+            return render(request, 'my_profile.html')
+
+
+class AddProfile(View):
+    """
+    This class enables the adding of a new user profile
+    """
+    def get(self, request):
+        """
+        Get method to load the user profile form
+        """
+        if request.user.is_authenticated:
+            the_profile = Profile.objects.filter(
+                user=request.user)
+            return render(
+                request, "add_profile.html", {"profile_form": ProfileForm(), "the_profile": the_profile})
+
+    def post(self, request):
+        """ Post method to allow post a new profile """
+        profile_form = ProfileForm(request.POST, request.FILES)
+
+        if profile_form.is_valid():
+            profile = profile_form.save(commit=False)
+            profile.user = request.user
+            # Code to make profile url slug unique using date time
+            curr_time = datetime.now()
+            date_time = curr_time.strftime("%m/%d/%Y%H:%M:%S")
+            profile.slug = slugify('-'.join([profile.full_name, date_time]))
+            profile.save()
+            return redirect('my_profile')
+        else:
+            messages.add_message(request, 30, 'Description Empty! Try again.')
+            profile_form = ProfileForm()
+
+        return render(
+            request,
+            "add_profile.html",
+            {
+                "profile_form": profile_form
             },
         )
 

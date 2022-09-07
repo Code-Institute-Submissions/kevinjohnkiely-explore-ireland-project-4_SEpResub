@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="container">
+    <div class="row">
+        <div class="col ms-auto">
+            <h1 class="text-center py-4">My Profile</h1>
+        </div>
+    </div>
+</div>
+
+{% if the_profiles|length == 0 %}
+
+<h3 class="text-center p-4">You haven't added your profile yet! Please <a class="link"
+        href="{% url 'add_profile' %}">add one now.</a></h3>
+
+{% else %}
+
+<div class="container" style="width: 66%;">
+    {% for profile in the_profiles %}
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="image-container">
+                {% if "placeholder_profile_image" in profile.profile_pic.url %}
+                <img class="card-img-top card-border" src="https://picsum.photos/id/1012/200" alt="Explore Ireland" >
+                {% else %}
+                <img class="card-img-top card-border" src=" {{ profile.profile_pic.url }}" alt="Explore Ireland" >
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <p>Full Name: {{ profile.full_name }}</p>
+            <p>Your Location: {{ profile.location }}</p>
+        </div>
+    </div>
+    
+    {% endfor%}
+</div>
+
+
+
+{% endif %}
+
+{% endblock content%}

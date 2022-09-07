@@ -10,6 +10,8 @@ urlpatterns = [
          views.LocationLike.as_view(), name='location_like'),
     path('my_locations', views.MyLocations.as_view(), name='my_locations'),
     path('add_location', views.AddLocation.as_view(), name='add_location'),
+    path('my_profile', views.MyProfile.as_view(), name='my_profile'),
+    path('add_profile', views.AddProfile.as_view(), name='add_profile'),
     path('edit_location/<int:pk>',
          views.EditLocation.as_view(), name='edit_location'),
     path('publish_location/<int:location_id>',

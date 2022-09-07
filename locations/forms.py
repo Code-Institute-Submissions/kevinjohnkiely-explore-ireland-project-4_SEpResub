@@ -1,4 +1,4 @@
-from .models import Comment, Location
+from .models import Comment, Location, Profile
 from django import forms
 from django_summernote.widgets import SummernoteWidget
 
@@ -36,3 +36,20 @@ class LocationForm(forms.ModelForm):
             'location_image'
             ].label = "Please upload a photo of location here! (Optional)"
         self.fields['status'].label = "Publish or Save Draft"
+
+
+class ProfileForm(forms.ModelForm):
+    """
+    This class sets up the User Profile Form and allows some
+    customizations of attributes
+    """
+    class Meta:
+        model = Profile
+        fields = ('full_name', 'location', 'profile_pic')
+
+    def __init__(self, *args, **kwargs):
+        super(ProfileForm, self).__init__(*args, **kwargs)
+        self.fields['full_name'].label = "Your Full Name"
+        self.fields[
+            'profile_pic'
+            ].label = "Please upload a photo of yourself here! (Optional)"
