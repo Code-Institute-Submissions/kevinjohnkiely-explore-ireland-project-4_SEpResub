@@ -75,7 +75,7 @@ Password: test12345
 The target audience for this application are potential tourists to Ireland, adults coming from a wide demographic area, who wish to explore new destinations and share their experiences with others. The application targets no particular subset of people, purely the tourist who wants to explore and is eager to advise others on their own experiences in Ireland.
 
 ## User Stories
-The 2 types of user who can access this application are the Site User, and the Admin user. The Site User can utilise all the expected aspects of a image sharing application such as this, such as signing up, uploading pictures and commenting/liking. The Admin Users functionality is limited to the more administrative tasks in the backend of the application, such as moderating comments. The user stories of this application are listed as follows:
+The 2 types of user who can access this application are the Site User, and the Admin user. The Site User can utilise all the expected aspects of a image sharing application such as this, such as signing up, completing a user profile, uploading pictures and commenting/liking. The Admin Users functionality is limited to the more administrative tasks in the backend of the application, such as moderating comments. The user stories of this application are listed as follows:
 
 ### User Stories for Site User
 
@@ -362,9 +362,73 @@ The following is a list of aspects of the application that could be added or imp
 
 # Deployment Methodology
 
-To deploy this application to Heroku, I closely followed the very helpful Django Cheat Sheet (https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit) supplied by Code Institute for this project.
+The deployment approach for this project was carried out in 2 main phases, the first phase was an early deployment of the project in an empty state but will all necessary libraries added, to save time or issues later on. The second phase was a final deployment after completion of development, with a few adjustments required for the final git commit.
 
-Whenever I needed to change something from the deployed version, I would navigate to the settings file and change the DEBUG variable to True so that the application would run without errors on Gitpod, and change back to False before deploying once again to Heroku.
+## Initial Deployment
+
+### This step details the creation and deployment of the empty Django project and associated libraries.
+
++ Initialization of development platform using the template at https://github.com/Code-Institute-Org/gitpod-full-template
++ Installation of Django using the command, pip3 install 'django<4' gunicorn
++ Installation of the required libraries: dj_database_url, psycopg2, dj3-cloudinary-storage
++ Creation of the requirments.txt file with command, pip3 freeze --local > requirements.txt
++ Creation of new Django project using command, django-admin startproject exploreireland.
++ Creation of Locations app using command, python3 manage.py startapp locations
++ Add newly created Locations app to INSTALLED_APPS section of settings.py file in directory
++ Migrate previous changes to database with command, python3 manage.py migrate
+
+### The following steps deal with deployment to Heroku, and connecting project to PostgreSQL database
+
++ Create a new app in Heroku dashboard with suitable name and location
++ Click on resources tab, search for and add Postgres Database
++ Click on settings tab and select "Reveal Config Vars" button where database URL is revealed, copy the URL
++ Create env.py file in project root directory folder, and set the required environment variables such as the 
+previously copied Database URL.
++ Create Secret Key env variable in env.py file and copy that value back into Config Vars section in Heroku dashboard.
++ Import env.py file into settings.py file, and add the required environment variable SECRET_KEY, and new
+DATABASE section outlining the new DATABASE_URL variable.
++ Repeat the Database migrations for new remote database on Heroku, using command, python3 manage.py migrate
+
+### These steps detail setting up Cloudinary storage with the project
+
++ Create Cloudinary account, and copy API Environment Variable in dashboard
++ In env.py file, add CLOUDINARY_URL environment variable, and copy this value to Config Vars in Heroku dashboard also.
++ In Heroku, add temporary attribute in Config Vars, DISABLE_COLLECTSTATIC = 1
++ In settings.py file, add Cloudinary libraries to INSTALLED_APPS section
++ In settings.py file, add STATICFILES_STORAGE and STATICFILES_DIRS variables to required values
++ In settings.py file, set the MEDIA_URL and DEFAULT_FILE_STORAGE variables to required values
+
+### The following steps set out the Django Templates and Allowed Hosts
+
++ In settings.py, add TEMPLATES_DIR variables to set 'templates' folder
++ In settings.py, changed DIRS key in TEMPLATES variable to previously created TEMPLATES_DIR folder
++ In settings.py, set ALLOWED_HOSTS variable to the localhost and the heroku app url.
+
+### Final steps before initial deployment
++ In project root directory, created new Media, Static and Templates directory folders
++ Create Procfile in root directory, to enable Heroku to run the application.
++ Add all files, and commit and push to Github.
++ In Heroku project dashboard, choose GitHub under Deployment Methods.
++ Find project name and click on Deploy Branch.
++ Open deployed application and verify that it works.
+
+## Final Deployment
+
+Once the application was fully developed and tested, the following steps were undertaken before final deployment of the application:
+
++ In settings.py, set the DEBUG variable to False
++ In settings.py, the code X_FRAME_OPTIONS = 'SAMEORIGIN' was added to enable the Summernote text editor to work correctly in the Location Post submission.
++ Add all files, commit and push to Github
++ Navigate to Heroku dashboard, and remove DISABLE_COLLECTSTATIC variable added in previous deployment
++ Click again on Deploy Branch, click Open App and confirm that application appears.
+
+
+
+
+
+
+
+
 
 <hr>
 
